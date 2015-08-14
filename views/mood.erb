@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+      <link rel='shortcut icon' href='/favicon.png' type='public/png/'>
+   <title><%= @title %></title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+ </head>
+ <body>
+   <div id="header-wrapper"></div>
+   <div id="header">
+     <a href="/"><img src="images/feelspepemangrayscale.png" alt="Feels Pepe Man" class="img-circle"></a>
+     <div id="header-text">
+     <h1>Feels Pepe Man</h1>
+       <br>
+       <p> <b>Welcome to Feels Pepe Man.</b> </p> 
+       <p> Drag and drop or screenshot Pepe to communicate your feels. </p>
+     </div>
+   </div>
+   <div id="container">
+     
+    <div id="main">
+      <div id = "rpepe">
+        <img class="img-thumbnail rpepe" src = <%= favicon = @pictures.sample %>>
+      </div>
+      <div id="opepe">
+        <% @pictures.each do |pic_url| %>
+          <img class="img-thumbnail" src = <%= pic_url %>>
+        <% end %>
+      </div>
+     </div>
+   </div>
+   
+   <div id="footer"> 
+     <p id="rare">These are the RAREST OF ALL PEPES. plz no steal...</p>
+     <p id="creds"> Code and Design by Chris Peleti & Nicolette Tovstashy</p>
+   </div>
+   
+ </body>
+</html>
